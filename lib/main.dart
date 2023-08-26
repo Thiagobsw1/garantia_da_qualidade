@@ -2,6 +2,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:garantia_da_qualidade/unidade1.dart';
+import 'package:garantia_da_qualidade/unidade2.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
@@ -53,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
       page = Unidade1() as Widget;
       break;
     case 1:
-      page = Unidade1() as Widget;
+      page = Unidade2() as Widget;
 
       break;
     default:
@@ -67,14 +68,14 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SafeArea(
                 child: NavigationRail(
-                  extended: constraints.maxWidth >= 700,
+                  extended: constraints.maxWidth >= 800,
                   destinations: [
                     NavigationRailDestination(
                       icon: Icon(Icons.ads_click),
                       label: Text('Unidade 1'),
                     ),
                     NavigationRailDestination(
-                      icon: Icon(Icons.favorite),
+                      icon: Icon(Icons.ads_click),
                       label: Text('Unidade 2'),
                     ),
                   ],
