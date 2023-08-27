@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Garantia de Qualidade',
         theme: ThemeData(
           useMaterial3: true,
@@ -65,8 +66,9 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context, constraints) {
         return Scaffold(
           body: Row(
+
             children: [
-              SafeArea(
+              SafeArea(                            
                 child: NavigationRail(
                   extended: constraints.maxWidth >= 800,
                   destinations: [
@@ -90,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Expanded(
                 child: Container(
                   color: Theme.of(context).colorScheme.primaryContainer,
-                  child: page,
+                  child: page,                  
                 ),
               ),
             ],
